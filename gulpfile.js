@@ -12,7 +12,7 @@ var karma = require("karma").server;
 gulp.task("test", function (done) {
     karma.start({
         configFile: __dirname + "/karma.conf.js",
-        singleRun: false
+        singleRun: true
     }, function (exitCode) {
         done(exitCode ? "There are failing tests" : undefined);
     });
