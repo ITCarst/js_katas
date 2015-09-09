@@ -1,0 +1,13 @@
+language: node_js
+node_js:
+    - "0.12.2"
+before_script:
+    - "export DISPLAY=:99.0"
+    - "sh -e /etc/init.d/xvfb start"
+    - npm install
+script: 
+    - gulp
+    - ./node_modules/karma/bin/karma start karma.conf.js --browsers Firefox --s
+after_script:
+    - echo "Build executed!"
+
