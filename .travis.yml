@@ -7,7 +7,6 @@ before_script:
     - npm install
 script: 
     - gulp
-    - ./node_modules/karma/bin/karma start karma.conf.js --browsers Firefox --s
 after_script:
     - echo "Build executed!"
 
