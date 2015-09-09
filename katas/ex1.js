@@ -1,7 +1,7 @@
 define(function () {
 
     function filterWords (phrase) {
-        return phrase.replace(/(bad|mean|ugly|horrible|hideous)/i,'awesome');
+        return phrase.replace(/(bad|mean|ugly|horrible|hideous)/ig,'awesome');
     }
 
     return filterWords;
