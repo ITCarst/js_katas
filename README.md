@@ -5,7 +5,5 @@ A place where I add my JavaScript Katas with TDD
 
 ### how to use
 run:
-    - npm install
-then run:
-    - gulp or 
-    - karma start
+- npm install
+- gulp or karma start
