@@ -1,2 +1,2 @@
-var ex1 = require("./katas/ex1");
-ex1();
+var katas = require("./katas/katas");
+katas();

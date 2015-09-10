@@ -3,12 +3,14 @@ var gulp = require("gulp"),
     notify = require("gulp-notify");
 //JS 
 var jshint = require("gulp-jshint");
+gulp.task("lint", function () {
+    return gulp.src(["test/katas.test.js", "katas/**/*.js"])
+        .pipe(jshint())
+        .pipe(jshint.reporter("default"));
+});
 
 //tests
 var karma = require("karma").server;
-
-
-
 gulp.task("test", function (done) {
     karma.start({
         configFile: __dirname + "/karma.conf.js",
@@ -19,6 +21,6 @@ gulp.task("test", function (done) {
 });
 
 gulp.task("default", function () {
-    gulp.start("test");
+    gulp.start("test", "lint");
 });
 
