@@ -45,6 +45,7 @@ define(function () {
         return arr;
     }
 
+    //to fix 
     function insertDash (num) {
         num = num.toString();
         for (var x = 0; x < num.length; x++) {
