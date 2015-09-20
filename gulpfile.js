@@ -13,7 +13,7 @@ gulp.task("lint", function () {
 });
 
 gulp.task("babel", function () {
-    return gulp.src("katas/**/*/js")
+    return gulp.src("katas/**/*.js")
         .pipe(babel())
         .pipe(gulp.dest("dist"));
 });
