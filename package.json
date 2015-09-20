@@ -1,34 +1,39 @@
 {
-    "name" : "js_katas",
-    "version" : "0.0.0",
-    "description" : "A place where I add my JavaScript Katas with TDD",
-    "author" : "Ionut Carst<itcarst@carst.me> {https://carst.me}",
-    "repository" : {
-        "type" : "git",
-        "url" : "https://github.com/IonutC/js_katas.git"
-    },
-    "scripts" : {
-        "test": "gulp"
-    },
-    "main": "main.js",
-    "devDependencies" : {
-        "gulp": "latest",
-        "gulp-jshint": "latest",
-        "gulp-livereload":"latest",
-        "gulp-notify": "latest",
-        "karma" : "latest",
-        "karma-requirejs" : "latest",
-        "karma-firefox-launcher": "latest",
-        "karma-jasmine": "latest",
-        "karma-sinon": "latest",
-        "karma-spec-reporter": "latest",
-        "requirejs": "latest"
-    },
-    "dependencies": {},
-    "bugs" : {
-        "url" : "https://github.com/IonutC/js_katas/issues"
-    },
-    "keywords": [
-        "javascript", "js kata", "kata", "challanges"    
-    ]
+  "name": "js_katas",
+  "version": "0.0.0",
+  "description": "A place where I add my JavaScript Katas with TDD",
+  "author": "Ionut Carst<itcarst@carst.me> {https://carst.me}",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/IonutC/js_katas.git"
+  },
+  "scripts": {
+    "test": "gulp"
+  },
+  "main": "main.js",
+  "devDependencies": {
+    "gulp": "latest",
+    "gulp-babel": "^5.2.1",
+    "gulp-jshint": "latest",
+    "gulp-livereload": "latest",
+    "gulp-notify": "latest",
+    "karma": "latest",
+    "karma-babel-preprocessor": "^5.2.2",
+    "karma-firefox-launcher": "latest",
+    "karma-jasmine": "latest",
+    "karma-requirejs": "latest",
+    "karma-sinon": "latest",
+    "karma-spec-reporter": "latest",
+    "requirejs": "latest"
+  },
+  "dependencies": {},
+  "bugs": {
+    "url": "https://github.com/IonutC/js_katas/issues"
+  },
+  "keywords": [
+    "javascript",
+    "js kata",
+    "kata",
+    "challanges"
+  ]
 }

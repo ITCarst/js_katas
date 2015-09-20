@@ -26,10 +26,43 @@ define(function () {
         });
     }
 
+    //n to int
+    function toInteger (n) {
+        if (!Math.trunc(n) || n === Infinity)
+            return 0;
+        return Math.trunc(n);
+    }
+
+    //reverse array
+    function reverse (arr) {
+        var len = arr.length, left = null, right = null;
+        for (left = 0; left < len / 2; left +=1) {
+            right = len - 1 - left;
+            var temp = arr[left];
+            arr[left] = arr[right];
+            arr[right] = temp;
+        }
+        return arr;
+    }
+
+    function insertDash (num) {
+        num = num.toString();
+        for (var x = 0; x < num.length; x++) {
+            if (num[x] % 2)
+                console.log(num[x]);
+        }
+
+        return num;    
+    }
+
     return {
         filterWords: filterWords,
         filterNumbers: FilterNumbers,
-        sumFromString: sumFromString
+        sumFromString: sumFromString,
+        toInteger: toInteger,
+        reverse: reverse,
+        insertDash : insertDash
+
     }
 });
 

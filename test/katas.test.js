@@ -55,12 +55,40 @@ define(function (require) {
         });
     });
 
+    var toInt = main.toInteger;
+    describe("toIntiger", function () {
+        it("should convert any input to an intiger", function () {
+            expect(toInt("4.55")).toBe(4);
+            expect(toInt(1337)).toBe(1337);
+            expect(toInt("123.424")).toBe(123);
+            expect(toInt(Infinity)).toBe(0);
+            expect(toInt(NaN)).toBe(0);
+            expect(toInt([1])).toBe(1);
+        });
+    });
+
+    describe("#reverse array", function () {
+        var reverse = main.reverse;
+
+        it("should take an array and reverse it", function () {
+            expect(reverse([1,2,3,4,5])).toEqual([5,4,3,2,1]);
+            expect(reverse(['hello','world','how','are','you','?'])).toEqual([ "?", "you", "are", "how", "world", "hello" ]);
+            expect(reverse([{a:1},{b:2}])).toEqual([{b:2},{a:1}]);
+        });
+    });
+
+    describe("#insert dashes", function () {
+        //var dashes = main.insertDash;
+        it("should insert dashes between each 2 odd no. and * between each even no.", function () {
+            //expect(dashes(454793)).toEqual("4547-9-3");
+            //expect(dashes(123456)).toEqual("123456");
+            //expect(dashes(40546793)).toEqual("4054*67-9-3");
+            //expect(dashes(1012356895)).toEqual("10123-56*89-5");
+        });
+          
 
 
-
-
-
-
+    });
 
 });
 

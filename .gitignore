@@ -1,4 +1,4 @@
 #don't add node_modules
 node_modules/*
 
-.swp
+*.swp
