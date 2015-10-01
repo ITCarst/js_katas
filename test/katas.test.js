@@ -78,17 +78,15 @@ define(function (require) {
     });
 
     describe("#insert dashes", function () {
-        //var dashes = main.insertDash;
+
+        var dashes = main.insertDash;
+
         it("should insert dashes between each 2 odd no. and * between each even no.", function () {
-            //expect(dashes(454793)).toEqual("4547-9-3");
-            //expect(dashes(123456)).toEqual("123456");
-            //expect(dashes(40546793)).toEqual("4054*67-9-3");
-            //expect(dashes(1012356895)).toEqual("10123-56*89-5");
+            expect(dashes(454793)).toEqual("4547-9-3");
+            expect(dashes(123456)).toEqual("123456");
+            expect(dashes(40546793)).toEqual("4054*67-9-3");
+            expect(dashes(1012356895)).toEqual("10123-56*89-5");
         });
-          
-
-
     });
-
 });
 

@@ -15,13 +15,13 @@ gulp.task("lint", function () {
 gulp.task("babel", function () {
     return gulp.src("katas/**/*.js")
         .pipe(babel())
-        .pipe(gulp.dest("dist"));
+        .pipe(gulp.dest("dist/"));
 });
 
 //tests
 var karma = require("karma").server;
 
-gulp.task("test", function (done) {
+gulp.task("testOnce", function (done) {
     karma.start({
         configFile: __dirname + "/karma.conf.js",
         singleRun: true
@@ -30,7 +30,26 @@ gulp.task("test", function (done) {
     });
 });
 
+gulp.task("test", function (done) {
+    karma.start({
+        configFile: __dirname + "/karma.conf.js",
+        singleRun: false
+    }, function (exitCode) {
+        done(exitCode ? "There are failing tests" : undefined);
+    });
+});
+
+
 gulp.task("default", function () {
-    gulp.start("babel", "test", "lint");
+    gulp.start("babel", "testOnce", "lint");
+});
+
+gulp.task("autotest", function () {
+    gulp.start("test");
+});
+
+gulp.task("watch", function () {
+    gulp.watch("katas/**/*.js", ["babel"]);
+    gulp.watch("test/**/*.test.js", ["test"]);
 });
 

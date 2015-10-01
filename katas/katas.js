@@ -1,4 +1,5 @@
 define(function () {
+
     //filter words based on regex
     function filterWords (phrase) {
         return phrase.replace(/(bad|mean|ugly|horrible|hideous)/ig,'awesome');
@@ -35,7 +36,8 @@ define(function () {
 
     //reverse array
     function reverse (arr) {
-        var len = arr.length, left = null, right = null;
+        let len = arr.length, left = null, right = null;
+
         for (left = 0; left < len / 2; left +=1) {
             right = len - 1 - left;
             var temp = arr[left];
@@ -47,13 +49,9 @@ define(function () {
 
     //to fix 
     function insertDash (num) {
-        num = num.toString();
-        for (var x = 0; x < num.length; x++) {
-            if (num[x] % 2)
-                console.log(num[x]);
-        }
-
-        return num;    
+         return num.toString()
+            .replace(/[13579](?=[13579])/g, "$&-")
+            .replace(/[2468](?=[2468])/g, "$&*");
     }
 
     return {
