@@ -88,5 +88,19 @@ define(function (require) {
             expect(dashes(1012356895)).toEqual("10123-56*89-5");
         });
     });
+
+    describe("#factorialFactory", function () {
+        var factory = main.factorialFactory;
+    
+        it("should return the factorial number", function () {
+            expect(factory(1)).toEqual(1);
+            expect(factory(5)).toEqual(120);
+            expect(factory(null)).toEqual(0);
+            expect(factory(-1)).toEqual(null);
+            expect(factory("nil")).toEqual(0);
+            expect(factory("None")).toEqual(0);
+        });
+        
+    });
 });
 
