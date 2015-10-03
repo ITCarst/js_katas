@@ -47,11 +47,25 @@ define(function () {
         return arr;
     }
 
-    //to fix 
+    //insert dashes to odd numbers and * for even numbers
     function insertDash (num) {
          return num.toString()
             .replace(/[13579](?=[13579])/g, "$&-")
             .replace(/[2468](?=[2468])/g, "$&*");
+    }
+    //return the factorial number of n => n!
+    let factorialFactory = n =>  {
+        let f = 1;
+
+        if (n === null || typeof n === "string")
+            return 0;
+        else if (n <= -1)
+            return null;
+       
+       for (var x = 2; x <= n; x++)
+           f = f * x;
+
+        return f;
     }
 
     return {
@@ -60,7 +74,8 @@ define(function () {
         sumFromString: sumFromString,
         toInteger: toInteger,
         reverse: reverse,
-        insertDash : insertDash
+        insertDash : insertDash,
+        factorialFactory: factorialFactory
 
     }
 });
