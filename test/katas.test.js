@@ -102,5 +102,20 @@ define(function (require) {
         });
         
     });
+
+    describe("#swap", function () {
+        var swap = main.swap;
+
+        it("should swap the case for each of the letters.", function () {
+            expect(swap("HelloWorld")).toEqual("hELLOwORLD");
+            expect(swap("CodeWars")).toEqual("cODEwARS");
+            expect(swap("J.79__R,o4jel6nkv3t9")).toEqual("j.79__r,O4JEL6NKV3T9");
+        });
+    });
 });
+
+
+
+
+
 

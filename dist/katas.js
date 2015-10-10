@@ -65,6 +65,21 @@ define(function () {
         return f;
     };
 
+    //swap caps to lower and vice-versa
+    var swap = function swap(str) {
+        var tmpUpper = [];
+
+        str.split("").filter(function (s) {
+            var tmp = "",
+                tmp2 = "";
+            if (s === s.toLowerCase()) tmp = tmp + s.toUpperCase();else tmp2 = tmp2 + s.toLowerCase();
+
+            tmpUpper.push(tmp.concat(tmp2));
+        });
+
+        return tmpUpper.join("");
+    };
+
     return {
         filterWords: filterWords,
         filterNumbers: FilterNumbers,
@@ -72,7 +87,8 @@ define(function () {
         toInteger: toInteger,
         reverse: reverse,
         insertDash: insertDash,
-        factorialFactory: factorialFactory
+        factorialFactory: factorialFactory,
+        swap: swap
 
     };
 });
