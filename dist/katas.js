@@ -80,6 +80,19 @@ define(function () {
         return tmpUpper.join("");
     };
 
+    var duplicateCount = function duplicateCount(str) {
+        if (str === "" || str.length === 0) return 0;
+        str = str.toLowerCase().split("");
+        var counts = {},
+            count = 0;
+        str.forEach(function (x) {
+            return counts[x] = (counts[x] || 0) + 1;
+        });
+        for (var _str in counts) {
+            if (counts[_str] > 1) count += 1;
+        }return count;
+    };
+
     return {
         filterWords: filterWords,
         filterNumbers: FilterNumbers,
@@ -88,7 +101,7 @@ define(function () {
         reverse: reverse,
         insertDash: insertDash,
         factorialFactory: factorialFactory,
-        swap: swap
-
+        swap: swap,
+        duplicateCount: duplicateCount
     };
 });

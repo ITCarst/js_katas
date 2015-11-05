@@ -85,7 +85,14 @@ define(function () {
         return tmpUpper.join("");
     }
 
-    
+    let duplicateCount = str => {
+        if (str === "" || str.length === 0) return 0;
+        str = str.toLowerCase().split("");
+        let counts = {}, count = 0;
+        str.forEach( (x) => counts[x] = (counts[x] || 0)+1 );
+        for(let str in counts) if (counts[str] > 1) count += 1;
+        return count;
+    }
 
     return {
         filterWords: filterWords,
@@ -95,8 +102,8 @@ define(function () {
         reverse: reverse,
         insertDash : insertDash,
         factorialFactory: factorialFactory,
-        swap : swap
-
+        swap : swap,
+        duplicateCount: duplicateCount
     }
 });
 

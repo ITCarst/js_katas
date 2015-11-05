@@ -112,10 +112,20 @@ define(function (require) {
             expect(swap("J.79__R,o4jel6nkv3t9")).toEqual("j.79__r,O4JEL6NKV3T9");
         });
     });
+
+    describe("duplicateCount", function () {
+      
+        var duplicateCount = main.duplicateCount;
+
+        it("should return the no. of duplicates found in the string", function () {
+            expect(duplicateCount("")).toEqual(0);
+            expect(duplicateCount("abcde")).toEqual(0);
+            expect(duplicateCount("aabbcde")).toEqual(2);
+            expect(duplicateCount("Indivisibility")).toEqual(1);
+            expect(duplicateCount("Indivisibilities")).toEqual(2);
+        });
+    });
 });
-
-
-
 
 
 
