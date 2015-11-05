@@ -93,6 +93,14 @@ define(function () {
         }return count;
     };
 
+    var reverseWords = function reverseWords(str) {
+        var st = [];
+        str.split(" ").forEach(function (s) {
+            st.push(s.split("").reverse().join(""));
+        });
+        return st.join(" ");
+    };
+
     return {
         filterWords: filterWords,
         filterNumbers: FilterNumbers,
@@ -102,6 +110,7 @@ define(function () {
         insertDash: insertDash,
         factorialFactory: factorialFactory,
         swap: swap,
-        duplicateCount: duplicateCount
+        duplicateCount: duplicateCount,
+        reverseWords: reverseWords
     };
 });

@@ -94,6 +94,15 @@ define(function () {
         return count;
     }
 
+
+    let reverseWords = str => {
+        let st = [];
+        str.split(" ").forEach( s => {
+            st.push(s.split("").reverse().join(""));
+        });
+        return st.join(" ");
+    }
+
     return {
         filterWords: filterWords,
         filterNumbers: FilterNumbers,
@@ -103,7 +112,8 @@ define(function () {
         insertDash : insertDash,
         factorialFactory: factorialFactory,
         swap : swap,
-        duplicateCount: duplicateCount
+        duplicateCount: duplicateCount,
+        reverseWords: reverseWords
     }
 });
 
