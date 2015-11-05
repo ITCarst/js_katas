@@ -125,6 +125,15 @@ define(function (require) {
             expect(duplicateCount("Indivisibilities")).toEqual(2);
         });
     });
+
+    describe("reverseWords", function () {
+        var reverseWords = main.reverseWords;
+
+        it("should reverse each word in the string", function () {
+            expect(reverseWords("This is an example!")).toEqual("sihT si na !elpmaxe");
+        });
+
+    });
 });
 
 
