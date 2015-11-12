@@ -1,7 +1,6 @@
 var gulp = require("gulp"),
     livereload = require("gulp-livereload"),
     notify = require("gulp-notify");
-
 //JS 
 var jshint = require("gulp-jshint"),
     babel = require("gulp-babel");
